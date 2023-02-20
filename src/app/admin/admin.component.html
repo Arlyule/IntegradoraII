@@ -6,7 +6,7 @@
                     <span>Emporium</span> 
                 </a>
             </div>                    
-            <button mat-icon-button (click)="toggleSidenav()" style="background-color: #302c2c;">
+            <button mat-icon-button (click)="toggleSidenav()">
                 <mat-icon>menu</mat-icon>
             </button>  
             <button mat-icon-button (click)="settings.adminSidenavIsPinned = !settings.adminSidenavIsPinned" fxShow="false" fxShow.gt-xs>
@@ -39,10 +39,10 @@
         </div>
     </div>
 </mat-toolbar>
-<mat-drawer-container class="admin-container" style="background-color: #c62036;"> 
+<mat-drawer-container class="admin-container"> 
     <mat-drawer #sidenav [opened]="settings.adminSidenavIsOpened" [mode]="(settings.adminSidenavIsPinned) ? 'side' : 'over'" class="admin-sidenav mat-elevation-z6" autoFocus="false">
         <perfect-scrollbar>
-            <div fxLayout="column" fxLayoutAlign="center center" class="user-block transition-2" [class.show]="settings.adminSidenavUserBlock" style="background-color: #c62036;"> 
+            <div fxLayout="column" fxLayoutAlign="center center" class="user-block transition-2" [class.show]="settings.adminSidenavUserBlock"> 
                 <div fxLayout="row" fxLayoutAlign="space-around center" class="user-info-wrapper">
                     <img [src]="userImage" alt="user-image">
                     <div class="user-info">

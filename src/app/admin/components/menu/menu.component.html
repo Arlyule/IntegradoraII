@@ -1,4 +1,4 @@
-<div *ngFor="let menu of parentMenu" class="menu-item">
+<div *ngFor="let menu of parentMenu" class="menu-item" style="background-color: #302c2c;">
     <a  *ngIf="menu.routerLink && !menu.hasSubMenu" mat-button 
         fxLayout="row" fxLayoutAlign="start center"
         [routerLink]="[menu.routerLink]" routerLinkActive="active-link" [routerLinkActiveOptions]="(menu.parentId != 0) ? { exact:false } : {exact:true}"
